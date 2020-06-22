@@ -1,6 +1,7 @@
 <?php
 if ($_GET['operation'] === 'licht2') {
-    $response =  array('response' => !(bool)$_GET['switch']);
+    $get = $_GET['switch'];
+    $response =  array('response' => ($get == 'false') ? true : false);
     exit;
 } ?>
 <!DOCTYPE html>
