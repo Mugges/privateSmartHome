@@ -1,15 +1,9 @@
 <?php
-if ($_GET['operation'] === 'licht2'){
-    if ($_GET['switch'] === 'false'){
-        $response = array('response' => true);
-        echo json_encode($response);
-    }elseif ($_GET['switch'] === 'true'){
-        $response = array('response' => false);
-        echo json_encode($response);
-    }
+if ($_GET['operation'] === 'licht2') {
+    $get = $_GET['switch'];
+    $response =  array('response' => ($get == 'false') ? true : false);
     exit;
-}
-?>
+} ?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
